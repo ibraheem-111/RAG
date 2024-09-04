@@ -725,7 +725,7 @@ def to_markdown(
         We also output any tables. They may live above, below or inside
         the text rectangles.
         """
-        for text_rect in text_rects:
+        for text_rect in reversed(text_rects):
             # output tables above this block of text
             md_string += output_tables(tabs, text_rect, tab_rects)
             md_string += output_images(page, textpage, text_rect, vg_clusters)
